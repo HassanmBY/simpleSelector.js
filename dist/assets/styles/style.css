@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #151515;
+  color: #ffffff;
+}
+
+a {
+  color: white;
+  font-size: 16px;
+}
+
+#item5 {
+  display: none;
+}
+
+.grey {
+  color: grey;
+}
+
+.orange {
+  color: orange;
+}
+
+.line {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */
