@@ -1,25 +1,40 @@
 {
-  "name": "my-project",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Mirza Hassan",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.27.7",
-    "cssnano": "^5.0.14",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-terser": "^2.1.0",
-    "sass": "^1.45.1",
-    "terser": "^5.10.0"
-  },
-  "dependencies": {
-    "postcss": "^8.4.5"
-  },
-  "description": ""
+    "name": "simple-selector.js",
+    "version": "1.0.1",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Mirza Hassan",
+    "license": "MIT",
+    "devDependencies": {
+        "browser-sync": "^2.27.7",
+        "cssnano": "^5.0.14",
+        "gulp": "^4.0.2",
+        "gulp-postcss": "^9.0.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.0.0",
+        "gulp-terser": "^2.1.0",
+        "sass": "^1.45.1",
+        "terser": "^5.10.0"
+    },
+    "dependencies": {
+        "postcss": "^8.4.5"
+    },
+    "description": "A simple JS library featuring a custom selector for every element of your html file(s) and a few useful functions",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HassanmBY/simpleSelector.js.git"
+    },
+    "keywords": [
+        "JQuery",
+        "Javascript",
+        "selector",
+        "simpleSelector",
+        "customJQuery"
+    ],
+    "bugs": {
+        "url": "https://github.com/HassanmBY/simpleSelector.js/issues"
+    },
+    "homepage": "https://github.com/HassanmBY/simpleSelector.js#readme"
 }
