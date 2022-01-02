@@ -31,7 +31,9 @@
         console.log('clicked on a li');
     });
 
-    µ('h2').on('dblclick', function() {})
+    µ('h2').on('dblclick', function() {
+        µ(this).addHtml(' .')
+    })
 
     µ('h1').hover(function() {
         µ(this).css('color', 'purple');
