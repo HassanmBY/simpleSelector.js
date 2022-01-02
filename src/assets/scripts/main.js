@@ -1,43 +1,64 @@
-$('document').ready(() => {
+µ(() => {
 
-    let li = $().create('li', 'item', 'Hello World !');
-    console.log(li);
-    $('#appendList').append(li)
+    let li = µ().create('li', 'item', 'Hello World !');
+    µ('#appendList').append(li);
 
-    /*        
-        $().ajax("https://jsonplaceholder.typicode.com/users", {
-                method: 'GET'
-            },
-            res => { return res.json(); },
-            data => {
-                let array = data;
-                console.log(array);
-            },
-            err => { console.log(err); }
-        );
-    */
+    µ().ajax("https://jsonplaceholder.typicode.com/users", {
+            method: 'GET'
+        },
+        res => {
+            return res.json();
+        },
+        data => {
+            let array = data;
+            console.log(array);
+        },
+        err => {
+            console.log(err);
+        }
+    );
 
-    $('a').css({
+    µ('a').css({
         color: 'orange',
         fontSize: '48px',
     });
 
-    // console.log($('a').css('color'));
+    µ('h1').css('font-size', '48px');
 
-    $('li').click(() => {
-        console.log('clicked on li');
-    })
+    console.log(µ('a').css('color'));
 
-    $('#item4').hideShow();
-    $('#item5').hideShow();
+    µ('li').click(() => {
+        console.log('clicked on a li');
+    });
 
-    $('h1').addClass('title');
-    $('h2').toggleClass('sub-title');
-    $('p').removeClass('paragraph');
-    $('p').toggleClass('paragraph');
-    // console.log($('h3').classList());
-    $('h3').replaceClass('grey', 'orange');
-    // console.log($('h3').hasClass('line'));
+    µ('h2').on('dblclick', function() {})
 
+    µ('h1').hover(function() {
+        µ(this).css('color', 'purple');
+    }, function() {
+
+        µ(this).css('color', 'white');
+    });
+
+
+    µ('h1').on('mouseout', function() {})
+
+    // µ('#item4').hideShow();  
+    µ('#item5').hideShow();
+
+    µ('h1').addClass('title');
+    µ('h2').toggleClass('sub-title');
+    µ('p').removeClass('paragraph');
+    µ('p').toggleClass('paragraph');
+    console.log(µ('h3').classList());
+    µ('h3').replaceClass('grey', 'orange');
+    console.log(µ('h3').hasClass('line'));
+    µ('li').each(function(i) {
+        if (i % 2 === 0) {
+            µ(this).css('color', 'green');
+        } else {
+            µ(this).css('color', 'orange');
+        }
+    });
 
 })

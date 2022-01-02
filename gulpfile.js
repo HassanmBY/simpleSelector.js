@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
+const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 
 
@@ -24,10 +25,17 @@ function styleTask() {
 }
 
 function scriptsTask() {
-    return src('./src/**/**/*.js', { sourcemaps: true })
-        .pipe(terser())
+    return src('./src/**/**/simpleSelector.js', { sourcemaps: true })
+        .pipe(terser({
+            toplevel: false,
+            keep_fnames: true,
+        }))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(dest('./dist/', { sourcemaps: '.' }))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream()) &&
+        src('./src/**/**/main.js', { sourcemaps: false })
+        .pipe(dest('./dist/', {}))
+        .pipe(browserSync.stream())
 }
 
 function htmlTask() {
